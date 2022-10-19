@@ -1,0 +1,46 @@
+Installation instructions.
+
+
+If you are a happy Debian GNU/Linux user, please ignore all of the
+following instructions except this very one: you can build and install this
+dictionary using debian/rules; for example type:
+
+	debian/rules binary
+
+to build a .deb package in the parent of the source directory (you have to
+be root for that to work); then you can install that with `dpkg --install'
+as usual.  (Of course you can also find a precompiled binary version on
+ftp.debian.org and its mirrors.)
+
+
+If you are not a Debian GNU/Linux user, please read on.
+
+
+1.  To build the dictionary type:
+
+	make
+
+
+2.  To install the dictionary and its man page type:
+
+	make install
+
+    This will install the files under /usr/local; if you wish to install
+    them in some other location (e.g. /usr) type something like this,
+    instead:
+
+	make prefix=/usr install
+
+
+3.  You may wish to compress the installed man page, since it is not done
+    by default.
+
+
+4.  You can clean the source directory, if you wish:
+
+	make clean
+
+
+Local variables:
+mode: indented-text
+end:

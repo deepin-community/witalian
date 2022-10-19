@@ -1,0 +1,31 @@
+witalian TODO --- list of things to be done.  19 Feb 1998.
+
+
+Everyone is welcome to help getting some or all of these things done!
+Please contact Davide G. M. Salvetti <salve@debian.org> if you can
+contribute.
+
+
+- Carefully check the words in the dictionary to fix typos or mispelled
+  ones.  Words not in italian.unchecked are supposed to be correct.
+
+
+- Split words in italian.unchecked according to the following rules:
+
+	Acronym and the like		     -> italian.sigle
+	Italian surnames		     -> italian.cognomi
+	Italian names (people and places)    -> italian.nomi
+	Italian common words		     -> italian.parole
+	Foreign(*) surnames		     -> italian.surnames
+	Foreign(*) names (people and places) -> italian.names
+	Foreign(*) common words		     -> italian.words
+	Other words(*)			     -> italian.others
+
+  (*): Obviously these words have to be of common use among Italian
+  speaking people.
+
+
+
+Local Variables:
+mode: indented-text
+End:

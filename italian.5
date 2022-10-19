@@ -1,0 +1,56 @@
+.\" Manual page for the Italian dictionary.
+.\"
+.\" Copyright (C) 1998, 2001, 10 by Davide G. M. Salvetti.
+.\"
+.\" This manual page is free software; you can redistribute it and/or
+ \" modify it under the terms of the GNU General Public License as
+ \" published by the Free Software Foundation; either version 3 of the
+ \" License, or (at your option) any later version.
+.\"
+.\" This manual page is distributed in the hope that it will be useful,
+ \" but WITHOUT ANY WARRANTY; without even the implied warranty of
+ \" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ \" General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU General Public License
+ \" along with this manual page.  If not, see
+ \" <http://www.gnu.org/licenses/>.
+.\"
+.\" On Debian GNU/Linux System you can find a copy of the GNU General
+ \" Public License in "/usr/share/common-licenses/GPL".
+.\"
+.TH italian 5 "31 October 1997" "Debian Project" "Debian GNU/Linux"
+.SH NAME
+italian \- a list of italian words
+.SH DESCRIPTION
+.B /usr/share/dict/italian
+is an ASCII file which contains an alphabetic list of words, one per line.
+.SH AUTHOR
+This word list has been collected from completely free (GPL'd) sources and
+is maintained by Davide G. M. Salvetti <salve@debian.org>.
+.SH FILES
+.I /etc/dictionary
+This is a link to a /usr/share/dict/<language> file.
+
+.I /usr/share/dict/words
+This is linked to /etc/dictionary, it exists for software compatibility.
+
+.PP
+The directory
+.I /usr/share/dict
+can contain word lists for many languages, with name of the language in
+English, e.g.,
+.I /usr/share/dict/french and /usr/share/dict/danish
+contain respectively lists of French and Danish words if they exist.  Such
+lists should be coded using the ISO 8859 character set encoding.
+.SH "SEE ALSO"
+.IR ispell "(1),"
+.IR look "(1)."
+.SH History
+The words lists are not specific, and may be generated from any number of
+sources.
+.\" local variables:
+.\" mode: nroff
+.\" ispell-local-dictionary: "american"
+.\" end:
+.\"  LocalWords:  italian GPL'd ispell

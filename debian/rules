@@ -1,0 +1,45 @@
+#! /usr/bin/make -f
+#
+# makefile rules for the Debian package witalian
+#
+# Copyright (C) 1997-2018 by Davide G. M. Salvetti.
+
+include /usr/share/dpkg/pkg-info.mk
+
+SHELL := /bin/bash
+SBUILD := sbuild --verbose
+
+%:
+	dh $@
+
+.PHONY: override_dh_auto_install
+override_dh_auto_install:
+	dh_auto_install -- prefix=/usr
+
+.PHONY: override_dh_installdebconf
+override_dh_installdebconf:
+	installdeb-wordlist
+
+.PHONY: snapshot
+snapshot: OBJ := --arch-all
+snapshot: DIST := unstable
+snapshot: BRANCH := $(shell git branch | perl -ne 'print if s/^\* //')
+snapshot: clean
+	gbp dch --debian-branch=$(BRANCH) --snapshot --auto --commit
+	gbp buildpackage --keyid='' \
+		--git-builder='$(SBUILD) $(OBJ) --dist=$(DIST)' \
+		--git-debian-branch=$(BRANCH)
+
+.PHONY: release
+release: OBJ := --arch-all --arch-any --source --source-only-changes
+release: DIST := unstable
+release: clean
+	git checkout master
+	gbp dch --release --commit
+	gbp buildpackage \
+		--git-builder='$(SBUILD) $(OBJ) --dist=$(DIST)' \
+		--git-tag
+
+.PHONY: upload
+upload:
+	dput ../witalian_$(DEB_VERSION)_source.changes

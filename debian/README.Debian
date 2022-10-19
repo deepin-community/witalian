@@ -1,0 +1,7 @@
+The Debian Package witalian
+----------------------------
+
+This is the Debian GNU/Linux version of a (yet very short) Italian dictionary,
+suitable for use with look(1), spell(1) and similar programs.
+
+ -- Davide G. M. Salvetti <salve@debian.org>, Fri, 31 Oct 1997 11:07:00 +0200

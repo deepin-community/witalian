@@ -1,0 +1,22 @@
+Source: witalian
+Section: text
+Priority: optional
+Build-Depends: debhelper (>= 10)
+Build-Depends-Indep: dictionaries-common-dev
+Maintainer: Davide G. M. Salvetti <salve@debian.org>
+Standards-Version: 4.1.4
+Vcs-Browser: https://salsa.debian.org/salve/witalian
+Vcs-Git: https://salsa.debian.org/salve/witalian.git
+
+Package: witalian
+Architecture: all
+Depends: dictionaries-common, ${misc:Depends}
+Provides: wordlist
+Description: Italian dictionary words for /usr/share/dict/
+ This package contains an alphabetic list of Italian words.
+ .
+ You may wish to use it in conjunction with a program like spell(1) to
+ spell-check an Italian text, or with a program like look(1) for word
+ completion.
+ .
+ It may even be used by the sysadmin to look for weak user passwords.

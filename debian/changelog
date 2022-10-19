@@ -1,0 +1,224 @@
+witalian (1.10) unstable; urgency=medium
+
+  * [497b038] debian/rules: Use dpkg pkg-info Makefile library
+  * [b839404] Switch from ISO-8859 to UTF-8.
+    Thanks to Pander (Closes: 901397)
+  * [e069d0d] Remove perl dependency.
+    Thanks to Pander (Closes: 901397)
+
+ -- Davide G. M. Salvetti <salve@debian.org>  Wed, 13 Jun 2018 18:37:07 +0200
+
+witalian (1.9) unstable; urgency=medium
+
+  * [4066873] debian/rules (snapshot): Do not sign snapshots
+  * [eb678b3] Repository migrated from Alioth to Salsa
+  * [71d4159] debian/copyright: Use https form for the copyright-format URL
+  * [33f3b13] Upgrade Standards-Version to 4.1.4
+  * [f79e593] Drop ePerl build dependency
+  * [de3184c] Call installdeb-wordlist at dh_auto_install time.
+    Thanks to Elena ``of Valhalla'' (Closes: #868891)
+  * [2ba7ae6] Switch to debhelper compatibility level 10
+  * [3f2ee50] Check some words
+
+ -- Davide G. M. Salvetti <salve@debian.org>  Fri, 25 May 2018 19:51:15 +0200
+
+witalian (1.8) unstable; urgency=medium
+
+  * [363f367] Upgrade Standards-Version to 3.9.8
+  * [d8961e0] debian/README.Debian: Do not include timestamps.
+    Thanks to Chris Lamb (Closes: #777361)
+  * [e96235b] debian/control: Use secure uris in VCS fields
+  * [d0b6a93] debian/rules: Source only upload
+  * [d922567] debian/rules: Use sbuild instead of pbuilder
+  * [098c9a9] Update copyright notice
+  * [a71f368] Add some missing words.
+    Thanks to Rolf Amadeus Gespritzt, Carlo Stemberger
+    (Closes: #790967, #785680)
+  * [1358a4d] Delete some incorrect words
+  * [563491e] Check some words
+
+ -- Davide G. M. Salvetti <salve@debian.org>  Sun, 15 Jan 2017 18:40:20 +0100
+
+witalian (1.7.6) unstable; urgency=medium
+
+  * [8ee4b6f] Stop keeping the ChangeLog
+  * [e16b3b8] Stop keeping a NEWS file
+  * [f52a506] Update COPYING to GPL-3
+  * [4ed75e9] Add and check some words
+  * [f25a8c9] Install top level docs from top level Makefile
+  * [8524818] Switch to debhelper compatibility level 9
+  * [2395b71] debian/control (Standards-Version): Update to 3.9.6
+  * [2881ab9] debian/control: Add VCS fields
+  * [b806b87] debian/copyright: Switch to machine readable format
+  * [6436f8c] debian/rules (release): Defer signing dsc and changes files
+  * [cb676cc] debian/rules (upload): New target
+
+ -- Davide G. M. Salvetti <salve@debian.org>  Fri, 07 Nov 2014 20:40:04 +0100
+
+witalian (1.7.5) unstable; urgency=low
+
+  * [1daff27] Switch to '3.0 (native)' source format.
+  * [60c045c] Add debian/copyright to the source package.
+  * [21b80e0] debian/control(Description): Omit initial article.
+  * [61ae5c8] Update Standards-Version to 3.9.2.
+
+ -- Davide G. M. Salvetti <salve@debian.org>  Sun, 18 Dec 2011 22:33:56 +0100
+
+witalian (1.7.4) unstable; urgency=low
+
+  * [32792aa] Switch wordlists from ISO_8859-1 to UTF-8. (Closes:
+    #470461) - thanks to Marc Fournier
+  * [6b8c877] Update Makefile to meet latest GNU standards, as per Make
+    manual.
+  * [985845a] Update man page file references from FSSTND to FHS.
+  * [c7cbb2a] Change EPerl sources suffix and rename binary package
+    specific files.
+  * [4fa6abb] COPYRIGHT updated to GPLv3.
+  * [0477111] Switch to debhelper with dictionaries-common-dev support.
+  * [fe4dfa4] Update Standards-Version to 3.9.1.
+
+ -- Davide G. M. Salvetti <salve@debian.org>  Thu, 26 Aug 2010 21:01:33 +0200
+
+witalian (1.7.3+nmu1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Updated witalian to the new .config system, this will also
+    decrease debconf prompting priority for initial d-i
+    installation. (Closes: #232176, #347343)
+
+ -- Agustin Martin Domingo <agmartin@debian.org>  Tue, 28 Nov 2006 15:52:56 +0100
+
+witalian (1.7.3) unstable; urgency=low
+
+  * copyright.in: Updated.
+
+  * control (Depends): Modified the dependency on "debconf" to "debconf |
+    debconf-2.0" in order to allow the transition to cdebconf.
+    (Closes: #332150)
+
+ -- Davide G. M. Salvetti <salve@debian.org>  Mon, 10 Oct 2005 18:25:34 +0200
+
+witalian (1.7.2) unstable; urgency=low
+
+  * New upstream version.  (Closes: #237088)
+  * changelog: Encoded in utf-8.
+  * control(Standards-Version): Upgraded to 3.6.0.
+
+ -- Davide G. M. Salvetti <salve@debian.org>  Fri, 23 Apr 2004 12:50:06 +0200
+
+witalian (1.7.1) unstable; urgency=low
+
+  * config: Sort choices case-insensitively.
+  * control(Pre-Depends): Removed dictionaries-common.
+  (Depends): Added dictionaries-common.
+
+ -- Davide G. M. Salvetti <salve@debian.org>  Fri,  1 Nov 2002 12:42:52 +0100
+
+witalian (1.7) unstable; urgency=medium
+
+  * New dictionaries policy implemented; thanks to Agustín Martín Domingo.
+  * config: New file.
+  * control(Build-Depends): Removed (misplaced).
+  (Build-Depends-Indep): Added eperl.
+  (Depends): Added debconf.
+  (Pre-Depends): Added dictionaries-common.  (Closes: #164267, #163941)
+  (Standards-Version): Upgraded to 3.5.7.
+  * postinst: New dictionaries policy compliant.  Source debconf module.
+  (do_link): Removed.
+  (ancient stuff): Dropped.
+  (configure): Rebuild wordlist list.
+  * postrm(remove): Check wordlist default.
+  (purge): Purge package from debconf database.
+  * prerm: New dictionaries policy compliant.
+  (undo_link): Removed.
+  * rules: Install config, templates, wordlist.
+  (DFILES): Added templates, wordlist.
+  * templates: New file.
+  * variables: Added $ELANGUAGE, $LLANGUAGE, $HLANGUAGE.
+  * wordlist: New file.
+
+ -- Davide G. M. Salvetti <salve@debian.org>  Sun, 13 Oct 2002 17:26:30 +0200
+
+witalian (1.6) unstable; urgency=low
+
+  * control(Priority): Set to optional.
+  * postinst(abort-deconfigure): Case clause separated.
+  * variables: $DPRIORITY lowered to 30; English priority (50) should be
+    higher than other languages.
+
+ -- Davide G. M. Salvetti <salve@debian.org>  Thu, 19 Jul 2001 16:18:10 +0200
+
+witalian (1.5) unstable; urgency=high
+
+  * FHS Transition.  (Closes: #27955, #91084, #91701)
+  * Eperl handling of Debian files.
+  * COPYRIGHT: New file.
+  * control(Standards-Version): Updated to 3.5.5.
+  (Build-Depends): added eperl.
+  * preinst: New file.
+  * prerm: Redesigned from scratch.
+  * postinst: Redesigned from scratch.
+  * postrm: Redesigned from scratch.
+  * rules: Added -isp to dpkg-gencontrol.
+  * variables: New file.
+
+ -- Davide G. M. Salvetti <salve@debian.org>  Wed,  4 Jul 2001 19:41:06 +0200
+
+witalian (1.4) frozen unstable; urgency=medium
+
+  * New upstream version.
+  * copyright: Updated FSF address.
+  * postinst: Added changes from a NMR.
+  * postrm: New file, added changes from a NMR.
+  * prerm: Added changes from a NMR.
+  * rules: Added postrm install rule.
+
+ -- Davide G. M. Salvetti <salve@debian.org>  Thu,  9 Apr 1998 19:06:37 +0200
+
+witalian (1.3) unstable; urgency=low
+
+  * New upstream version.
+  * README.debian: Renamed to README.
+  * control: Updated Standards-Version: 2.4.0.0.
+  * rules: Improved readability.
+
+ -- Davide G. M. Salvetti <salve@debian.org>  Thu, 19 Feb 1998 18:07:11 +0100
+
+witalian (1.2) unstable; urgency=low
+
+  * New upstream version.
+  * control: witalian matches standards version 2.3.0.1.
+  * control: Extended description improved.
+  * postinst: Added check to properly handle upgrades.
+  * prerm: Added check to properly handle upgrades.
+  * rules: Doesn't use debstd anymore.
+
+ -- Davide G. M. Salvetti <salve@debian.org>  Mon, 29 Dec 1997 11:07:00 +0100
+
+witalian (1.1) unstable; urgency=low
+
+  * New maintainer, completely new sources.  The non-free package
+    witalian-1.0 is now obsolete.
+  * Package extended description added.  (Closes: #3691)
+  * Multi architecture support added.  (Closes: #3923)
+  * witalian now provides "wordlist" virtual package.  (Closes: #9402)
+  * Repackaged in new source format.  (Closes: #9539)
+
+ -- Davide G. M. Salvetti <salve@debian.org>  Fri, 31 Oct 1997 11:07:00 +0200
+
+comment (0) UNRELEASED; urgency=low
+
+  * This is not a changelog entry.
+
+  * local variables:
+  * mode: debian-changelog
+  * coding: utf-8
+  * ispell-local-dictionary: "american"
+  * end:
+    
+  * LocalWords:  witalian EPerl debhelper debconf cdebconf utf config Pre Martín
+  * LocalWords:  Agustín Indep eperl postinst wordlist postrm prerm DFILES FHS
+  * LocalWords:  ELANGUAGE LLANGUAGE HLANGUAGE deconfigure DPRIORITY preinst isp
+  * LocalWords:  dpkg gencontrol FSF NMR README debian debstd Multi
+  
+ -- Davide G. M. Salvetti <salve@debian.org>  Thu, 01 Jan 1970 00:00:01 +0000
